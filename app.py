@@ -5,6 +5,7 @@ from datetime import datetime
 from requests.models import Response
 
 openai.api_key = os.getenv("OPENAI_KEY")
+print(os.getenv("OPENAI_KEY"))
 
 app = Flask(__name__)
 
