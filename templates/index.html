@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistant Médical Virtuel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <button id="toggleHistory" class="history-toggle">≡ Historique</button>
+        <div class="history-sidebar" id="historySidebar">
+            <h3>Historique des conversations</h3>
+            <div class="history-list" id="historyList"></div>
+        </div>
+
+        <div class="main-content">
+            <header>
+                <h1>Assistant Médical</h1>
+                <p>Posez vos questions sur la santé (ceci ne remplace pas une consultation médicale)</p>
+            </header>
+
+            <div class="chat-box" id="chatBox">
+                <!-- Les messages apparaîtront ici -->
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="userInput" placeholder="Posez votre question médicale...">
+                <button id="sendButton">Envoyer</button>
+            </div>
+
+            <footer>
+                <p class="disclaimer">⚠️ Cet assistant ne remplace pas un avis médical professionnel. En cas d'urgence, contactez le 15 (Samu) ou le 112.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
